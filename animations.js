@@ -33,7 +33,29 @@ function fadeOut() {
     });
     gsap.to(".content",2, {
       opacity: 1,
-      y: "-40%",
+      y: "-20px",
+      delay: 2,
+      ease: Power2.easeInOut,
+    });
+    gsap.from(".img-container",2, {
+      delay: 2,
+      opacity: 0,
+      ease: Power2.easeInOut,
+    });
+    gsap.to(".img-container",2, {
+      opacity: 1,
+      y: "-20px",
+      delay: 2,
+      ease: Power2.easeInOut,
+    });
+    gsap.from(".row-wrap",2, {
+      delay: 2,
+      opacity: 0,
+      ease: Power2.easeInOut,
+    });
+    gsap.to(".row-wrap",2, {
+      opacity: 1,
+      y: "50%",
       delay: 2,
       ease: Power2.easeInOut,
     });

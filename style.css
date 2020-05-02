@@ -9,15 +9,46 @@ body {
   font-family: Poppins;
   background: white;
 }
-.content {
+
+.img {
+  height: 60%;
   width: 60%;
-  margin: 0 auto;
-  z-index: -1;
-  position: absolute;
-  top: 60%;
-  left: 10%;
-  transform: translate(0, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.img canvas {
+  width: 75% !important;
+  height: 100% !important;
+}
+.row-wrap {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translate(0%,-50%);
+}
+.img-container {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  height: 50%;
+  width: 50%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 60% !important;
+  align-self: center;
+}
+
 .content h1 {
   font-family: Poppins;
   font-size: 54px;
@@ -25,19 +56,22 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 10px;
+  align-self: flex-start;
+  justify-self: flex-start;
 }
 .content p {
   margin-top: 0;
   text-align: left;
   color: #101010;
   font-weight: 400;
+  justify-self: flex-end;
 }
 .overlay-2 {
   z-index: 0;
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #48a9a6;
+  background: #8E7DDF;
 }
 .overlay {
   z-index: 1;
@@ -100,6 +134,19 @@ button {
   transition: 0.8s ease-out;
 }
 
-.myBtn:hover::before{
-    top: 0;
+.myBtn:hover::before {
+  top: 0;
+}
+@media (max-width: 760px) {
+  .row-wrap {
+    flex-direction: column-reverse;
+  }
+  .content {
+    align-self: flex-end;
+    width: 90%;
+  }
+  .img{
+    width: 80%;
+    height: 80%;
+  }
 }
