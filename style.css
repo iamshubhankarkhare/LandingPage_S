@@ -9,15 +9,60 @@ body {
   font-family: Poppins;
   background: white;
 }
-.content {
+
+.img {
+  height: 60%;
   width: 60%;
-  margin: 0 auto;
-  z-index: -1;
-  position: absolute;
-  top: 60%;
-  left: 10%;
-  transform: translate(0, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.img canvas {
+  width: 75% !important;
+  height: 100% !important;
+}
+.row-wrap {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translate(0%,-50%);
+}
+.hero-title {
+  position: absolute;
+  top: 85%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-family: "Poppins";
+  font-size: 50px;
+}
+
+.hero-title .letter {
+  display: inline-block;
+  opacity: 0;
+}
+.img-container {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  height: 50%;
+  width: 50%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 60% !important;
+  align-self: center;
+}
+
 .content h1 {
   font-family: Poppins;
   font-size: 54px;
@@ -25,19 +70,22 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 10px;
+  align-self: flex-start;
+  justify-self: flex-start;
 }
 .content p {
   margin-top: 0;
   text-align: left;
   color: #101010;
   font-weight: 400;
+  justify-self: flex-end;
 }
 .overlay-2 {
   z-index: 0;
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #48a9a6;
+  background: #8e7ddf;
 }
 .overlay {
   z-index: 1;
@@ -46,16 +94,23 @@ body {
   width: 100%;
   height: 100vh;
   background: #101010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .overlay p {
   font-size: 300px;
   font-weight: 800;
+ 
+ 
 }
 .screen {
   color: #323232;
   font-family: Poppins;
   position: absolute;
   top: 12%;
+  align-self: center;
+  justify-self: center;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -65,6 +120,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  top: auto;
+
 }
 button {
   display: block;
@@ -100,6 +157,29 @@ button {
   transition: 0.8s ease-out;
 }
 
-.myBtn:hover::before{
-    top: 0;
+.myBtn:hover::before {
+  top: 0;
+}
+@media (max-width: 760px) {
+  .row-wrap {
+    flex-direction: column-reverse;
+  }
+  .content {
+    align-self: flex-end;
+    width: 90%;
+  }
+  .img {
+    width: 80%;
+    height: 80%;
+  }
+  .hero-title {
+    top: 99%;
+   right: -5%;
+    font-size: 25px;
+  }
+  .overlay p {
+    font-size: 100px;
+    font-weight: 400;
+    top: auto;
+  }
 }
