@@ -30,6 +30,20 @@ body {
   align-items: center;
   transform: translate(0%,-50%);
 }
+.hero-title {
+  position: absolute;
+  top: 85%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-family: "Poppins";
+  font-size: 50px;
+}
+
+.hero-title .letter {
+  display: inline-block;
+  opacity: 0;
+}
 .img-container {
   height: 90%;
   width: 90%;
@@ -71,7 +85,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #8E7DDF;
+  background: #8e7ddf;
 }
 .overlay {
   z-index: 1;
@@ -80,16 +94,23 @@ body {
   width: 100%;
   height: 100vh;
   background: #101010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .overlay p {
   font-size: 300px;
   font-weight: 800;
+ 
+ 
 }
 .screen {
   color: #323232;
   font-family: Poppins;
   position: absolute;
   top: 12%;
+  align-self: center;
+  justify-self: center;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -99,6 +120,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  top: auto;
+
 }
 button {
   display: block;
@@ -145,8 +168,18 @@ button {
     align-self: flex-end;
     width: 90%;
   }
-  .img{
+  .img {
     width: 80%;
     height: 80%;
+  }
+  .hero-title {
+    top: 99%;
+   right: -5%;
+    font-size: 25px;
+  }
+  .overlay p {
+    font-size: 100px;
+    font-weight: 400;
+    top: auto;
   }
 }
